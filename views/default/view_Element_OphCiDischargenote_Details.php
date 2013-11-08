@@ -18,45 +18,84 @@
  */
 ?>
 
-<h4 class="elementTypeName"><?php echo $element->elementType->name?></h4>
+<section class="element element-data">
+	<h3 class="data-title"><?php echo $element->elementType->name ?></h3>
 
-<table class="subtleWhite normalText">
-	<tbody>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('ready_to_go_home'))?>:</td>
-			<td><span class="big"><?php echo $element->ready_to_go_home ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('checklist_completed_satisfactorily'))?>:</td>
-			<td><span class="big"><?php echo $element->checklist_completed_satisfactorily ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('able_to_instill_drops'))?>:</td>
-			<td><span class="big"><?php echo $element->able_to_instill_drops ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('district_nurse_contacted'))?>:</td>
-			<td><span class="big"><?php echo $element->district_nurse_contacted ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('discharged_home_on_id'))?></td>
-			<td><span class="big"><?php echo $element->discharged_home_on ? $element->discharged_home_on->name : 'None'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('information_provided'))?>:</td>
-			<td><span class="big"><?php echo $element->information_provided ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('following_day_assessment'))?>:</td>
-			<td><span class="big"><?php echo $element->following_day_assessment ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('follow_up'))?>:</td>
-			<td><span class="big"><?php echo $element->follow_up ? 'Yes' : 'No'?></span></td>
-		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('additional_comments'))?></td>
-			<td><span class="big"><?php echo CHtml::encode($element->additional_comments)?></span></td>
-		</tr>
-	</tbody>
-</table>
+	<div class="element-data">
+		<div class="row">
+			<div class="large-12 column data-value highlight">
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('ready_to_go_home'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->ready_to_go_home ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('checklist_completed_satisfactorily'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->checklist_completed_satisfactorily ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('able_to_instill_drops'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->able_to_instill_drops ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('district_nurse_contacted'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->district_nurse_contacted ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('discharged_home_on_id'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->discharged_home_on ? $element->discharged_home_on->name : 'None'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('information_provided'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->information_provided ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('following_day_assessment'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->following_day_assessment ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('follow_up'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo $element->follow_up ? 'Yes' : 'No'?></div>
+					</div>
+				</div>
+				<div class="row data-row">
+					<div class="large-4 column">
+						<div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('additional_comments'))?>:</div>
+					</div>
+					<div class="large-8 column">
+						<div class="data-value"><?php echo CHtml::encode($element->additional_comments)?></div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>

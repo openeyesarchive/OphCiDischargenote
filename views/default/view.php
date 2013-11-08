@@ -18,17 +18,14 @@
  */
 ?>
 
-<?php
-	$this->breadcrumbs=array($this->module->id);
-	$this->header();
+<?php $this->beginContent('//patient/event_container');
+$this->moduleNameCssClass.=" highlight-fields";
 ?>
 
-<h3 class="withEventIcon"><?php echo $this->event_type->name?></h3>
+<h2 class="event-title"><?php echo $this->event_type->name ?></h2>
 
-<div>
-	<?php $this->renderDefaultElements($this->action->id)?>
-	<?php $this->renderOptionalElements($this->action->id)?>
-	<div class="cleartall"></div>
-</div>
 
-<?php $this->footer()?>
+<?php $this->renderDefaultElements($this->action->id)?>
+<?php $this->renderOptionalElements($this->action->id)?>
+
+<?php $this->endContent() ;?>
