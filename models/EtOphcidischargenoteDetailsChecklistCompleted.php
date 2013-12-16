@@ -26,7 +26,7 @@
  * The followings are the available model relations:
  */
 
-class EtOphcidischargenoteDetailsChecklistCompleted extends BaseActiveRecord
+class EtOphcidischargenoteDetailsChecklistCompleted extends BaseActiveRecordVersioned
 {
 	/**
 	 * Returns the static model of the specified AR class.

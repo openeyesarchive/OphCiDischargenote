@@ -26,7 +26,7 @@
  * The followings are the available model relations:
  */
 
-class EtOphcidischargenoteDetailsInformationLeaflet extends BaseActiveRecord
+class EtOphcidischargenoteDetailsInformationLeaflet extends BaseActiveRecordVersioned
 {
 	/**
 	 * Returns the static model of the specified AR class.

@@ -26,7 +26,7 @@
  * The followings are the available model relations:
  */
 
-class EtOphcidischargenoteDetailsReadyToGoHome extends BaseActiveRecord
+class EtOphcidischargenoteDetailsReadyToGoHome extends BaseActiveRecordVersioned
 {
 	/**
 	 * Returns the static model of the specified AR class.
