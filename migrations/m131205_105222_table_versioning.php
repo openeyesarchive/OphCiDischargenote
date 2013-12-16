@@ -246,19 +246,12 @@ CREATE TABLE `et_ophcidischargenote_details_ready_to_go_home_version` (
 	public function down()
 	{
 		$this->dropColumn('et_ophcidischargenote_details','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_checklist_completed','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_checklist_completed_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_district_nurse_contacted','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_district_nurse_contacted_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_follow_up','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_follow_up_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_following_day_assessment','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_following_day_assessment_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_information_leaflet','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_information_leaflet_version','deleted');
 		$this->dropColumn('et_ophcidischargenote_details_ready_to_go_home','deleted');
-		$this->dropColumn('et_ophcidischargenote_details_ready_to_go_home_version','deleted');
 
 		$this->dropTable('et_ophcidischargenote_details_version');
 		$this->dropTable('et_ophcidischargenote_details_checklist_completed_version');
