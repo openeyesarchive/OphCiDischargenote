@@ -11,7 +11,7 @@ CREATE TABLE `et_ophcidischargenote_details_version` (
 	`checklist_completed_id` int(10) unsigned NOT NULL,
 	`ready_to_go_home_id` int(10) unsigned NOT NULL,
 	`district_nurse_contacted_id` int(10) unsigned NOT NULL,
-	`comments` text COLLATE utf8_bin,
+	`comments` text,
 	`following_day_assessment_id` int(10) unsigned NOT NULL,
 	`follow_up_id` int(10) unsigned NOT NULL,
 	`information_leaflet_id` int(10) unsigned NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `et_ophcidischargenote_details_version` (
 	CONSTRAINT `acv_et_ophcidischargenote_details_following_day_assessment_fk` FOREIGN KEY (`following_day_assessment_id`) REFERENCES `et_ophcidischargenote_details_following_day_assessment` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_follow_up_fk` FOREIGN KEY (`follow_up_id`) REFERENCES `et_ophcidischargenote_details_follow_up` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_information_leaflet_fk` FOREIGN KEY (`information_leaflet_id`) REFERENCES `et_ophcidischargenote_details_information_leaflet` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_version','id','int(10) unsigned NOT NULL');
@@ -56,7 +56,7 @@ CREATE TABLE `et_ophcidischargenote_details_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_checklist_completed_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -67,7 +67,7 @@ CREATE TABLE `et_ophcidischargenote_details_checklist_completed_version` (
 	KEY `acv_et_ophcidischargenote_details_checklist_completed_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_checklist_completed_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_checklist_completed_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_checklist_completed_version','id','int(10) unsigned NOT NULL');
@@ -85,7 +85,7 @@ CREATE TABLE `et_ophcidischargenote_details_checklist_completed_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_district_nurse_contacted_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -96,7 +96,7 @@ CREATE TABLE `et_ophcidischargenote_details_district_nurse_contacted_version` (
 	KEY `acv_phcidischargenote_details_district_nurse_contacted_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_phcidischargenote_details_district_nurse_contacted_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_phcidischargenote_details_district_nurse_contacted_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_district_nurse_contacted_version','id','int(10) unsigned NOT NULL');
@@ -114,7 +114,7 @@ CREATE TABLE `et_ophcidischargenote_details_district_nurse_contacted_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_follow_up_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -125,7 +125,7 @@ CREATE TABLE `et_ophcidischargenote_details_follow_up_version` (
 	KEY `acv_et_ophcidischargenote_details_follow_up_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_follow_up_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_follow_up_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_follow_up_version','id','int(10) unsigned NOT NULL');
@@ -143,7 +143,7 @@ CREATE TABLE `et_ophcidischargenote_details_follow_up_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_following_day_assessment_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -154,7 +154,7 @@ CREATE TABLE `et_ophcidischargenote_details_following_day_assessment_version` (
 	KEY `acv_phcidischargenote_details_following_day_assessment_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_phcidischargenote_details_following_day_assessment_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_phcidischargenote_details_following_day_assessment_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_following_day_assessment_version','id','int(10) unsigned NOT NULL');
@@ -172,7 +172,7 @@ CREATE TABLE `et_ophcidischargenote_details_following_day_assessment_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_information_leaflet_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -183,7 +183,7 @@ CREATE TABLE `et_ophcidischargenote_details_information_leaflet_version` (
 	KEY `acv_et_ophcidischargenote_details_information_leaflet_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_information_leaflet_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_information_leaflet_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_information_leaflet_version','id','int(10) unsigned NOT NULL');
@@ -201,7 +201,7 @@ CREATE TABLE `et_ophcidischargenote_details_information_leaflet_version` (
 		$this->execute("
 CREATE TABLE `et_ophcidischargenote_details_ready_to_go_home_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-	`name` varchar(128) COLLATE utf8_bin NOT NULL,
+	`name` varchar(128) NOT NULL,
 	`display_order` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
@@ -212,7 +212,7 @@ CREATE TABLE `et_ophcidischargenote_details_ready_to_go_home_version` (
 	KEY `acv_et_ophcidischargenote_details_ready_to_go_home_cui_fk` (`created_user_id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_ready_to_go_home_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_ready_to_go_home_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophcidischargenote_details_ready_to_go_home_version','id','int(10) unsigned NOT NULL');
