@@ -25,7 +25,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				// element lookup table et_ophcidischargenote_details_checklist_completed
 		$this->createTable('et_ophcidischargenote_details_checklist_completed', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -36,14 +36,14 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_checklist_completed_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_checklist_completed_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_checklist_completed_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_checklist_completed',array('name'=>'Yes','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_checklist_completed',array('name'=>'No','display_order'=>2));
 									// element lookup table et_ophcidischargenote_details_ready_to_go_home
 		$this->createTable('et_ophcidischargenote_details_ready_to_go_home', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -54,14 +54,14 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_ready_to_go_home_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_ready_to_go_home_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_ready_to_go_home_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_ready_to_go_home',array('name'=>'Yes','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_ready_to_go_home',array('name'=>'No','display_order'=>2));
 									// element lookup table et_ophcidischargenote_details_district_nurse_contacted
 		$this->createTable('et_ophcidischargenote_details_district_nurse_contacted', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -72,14 +72,14 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_district_nurse_contacted_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_district_nurse_contacted_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_district_nurse_contacted_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_district_nurse_contacted',array('name'=>'Yes','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_district_nurse_contacted',array('name'=>'No','display_order'=>2));
 									// element lookup table et_ophcidischargenote_details_following_day_assessment
 		$this->createTable('et_ophcidischargenote_details_following_day_assessment', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -90,7 +90,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_following_day_assessment_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_following_day_assessment_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_following_day_assessment_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_following_day_assessment',array('name'=>'Telephone','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_following_day_assessment',array('name'=>'Home visit','display_order'=>2));
@@ -98,7 +98,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 									// element lookup table et_ophcidischargenote_details_follow_up
 		$this->createTable('et_ophcidischargenote_details_follow_up', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -109,7 +109,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_follow_up_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_follow_up_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_follow_up_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_follow_up',array('name'=>'Doctor clinic 1-2 weeks','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_follow_up',array('name'=>'Nurse led clinic 1-2 weeks','display_order'=>2));
@@ -118,7 +118,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 									// element lookup table et_ophcidischargenote_details_information_leaflet
 		$this->createTable('et_ophcidischargenote_details_information_leaflet', array(
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
-				'name' => 'varchar(128) COLLATE utf8_bin NOT NULL',
+				'name' => 'varchar(128) NOT NULL',
 				'display_order' => 'int(10) unsigned NOT NULL DEFAULT 1',
 								'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
@@ -129,7 +129,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 				'KEY `et_ophcidischargenote_details_information_leaflet_cui_fk` (`created_user_id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_information_leaflet_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophcidischargenote_details_information_leaflet_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						$this->insert('et_ophcidischargenote_details_information_leaflet',array('name'=>'Yes','display_order'=>1));
 						$this->insert('et_ophcidischargenote_details_information_leaflet',array('name'=>'No','display_order'=>2));
@@ -169,7 +169,7 @@ class m120615_152452_event_type_OphCiDischargenote extends CDbMigration
 								'CONSTRAINT `et_ophcidischargenote_details_following_day_assessment_fk` FOREIGN KEY (`following_day_assessment_id`) REFERENCES `et_ophcidischargenote_details_following_day_assessment` (`id`)',
 								'CONSTRAINT `et_ophcidischargenote_details_follow_up_fk` FOREIGN KEY (`follow_up_id`) REFERENCES `et_ophcidischargenote_details_follow_up` (`id`)',
 								'CONSTRAINT `et_ophcidischargenote_details_information_leaflet_fk` FOREIGN KEY (`information_leaflet_id`) REFERENCES `et_ophcidischargenote_details_information_leaflet` (`id`)',
-							), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+							), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 						}
 
