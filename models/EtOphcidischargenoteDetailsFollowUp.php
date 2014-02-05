@@ -26,7 +26,7 @@
  * The followings are the available model relations:
  */
 
-class EtOphcidischargenoteDetailsFollowUp extends BaseActiveRecordVersioned
+class EtOphcidischargenoteDetailsFollowUp extends BaseActiveRecordVersionedSoftDelete
 {
 	/**
 	 * Returns the static model of the specified AR class.
