@@ -31,13 +31,7 @@ CREATE TABLE `et_ophcidischargenote_details_version` (
 	KEY `acv_et_ophcidischargenote_details_information_leaflet_fk` (`information_leaflet_id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_checklist_completed_fk` FOREIGN KEY (`checklist_completed_id`) REFERENCES `et_ophcidischargenote_details_checklist_completed` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_ready_to_go_home_fk` FOREIGN KEY (`ready_to_go_home_id`) REFERENCES `et_ophcidischargenote_details_ready_to_go_home` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_district_nurse_contacted_fk` FOREIGN KEY (`district_nurse_contacted_id`) REFERENCES `et_ophcidischargenote_details_district_nurse_contacted` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_following_day_assessment_fk` FOREIGN KEY (`following_day_assessment_id`) REFERENCES `et_ophcidischargenote_details_following_day_assessment` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_follow_up_fk` FOREIGN KEY (`follow_up_id`) REFERENCES `et_ophcidischargenote_details_follow_up` (`id`),
-	CONSTRAINT `acv_et_ophcidischargenote_details_information_leaflet_fk` FOREIGN KEY (`information_leaflet_id`) REFERENCES `et_ophcidischargenote_details_information_leaflet` (`id`)
+	CONSTRAINT `acv_et_ophcidischargenote_details_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
