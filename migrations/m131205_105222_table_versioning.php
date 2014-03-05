@@ -32,8 +32,8 @@ CREATE TABLE `et_ophcidischargenote_details_version` (
 	CONSTRAINT `acv_et_ophcidischargenote_details_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophcidischargenote_details_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`),
-	CONSTRAINT `et_ophcidischargenote_details_following_day_assessment_fk` FOREIGN KEY (`following_day_assessment_id`) REFERENCES `et_ophcidischargenote_details_following_day_assessment` (`id`),
-	CONSTRAINT `et_ophcidischargenote_details_follow_up_fk` FOREIGN KEY (`follow_up_id`) REFERENCES `et_ophcidischargenote_details_follow_up` (`id`)
+	CONSTRAINT `acv_et_ophcidischargenote_details_following_day_assessment_fk` FOREIGN KEY (`following_day_assessment_id`) REFERENCES `et_ophcidischargenote_details_following_day_assessment` (`id`),
+	CONSTRAINT `acv_et_ophcidischargenote_details_follow_up_fk` FOREIGN KEY (`follow_up_id`) REFERENCES `et_ophcidischargenote_details_follow_up` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
